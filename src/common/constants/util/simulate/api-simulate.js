@@ -17,7 +17,8 @@ export const simulateGetUserData_Success = ({email, password}) => {
   allData.forEach(d => {
     if (d.email === email) {
       doesExist = true;
-      if (hashPasswordToSimulate(password) === d.hashedPassword) {
+      if (hashPasswordToSimulate(password) === d.hashedPassword ||
+        password === d.hashedPassword) {
         isValidPassword = true;
         data = d;
       }

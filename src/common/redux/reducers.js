@@ -1,9 +1,8 @@
 import TYPES from './types';
-import { API_ENDPOINTS, API_STATUS } from '../constants';
+import { API_STATUS } from '../constants';
 
 const initialState = {
   api: {
-    endPoints: API_ENDPOINTS,
     statuses: API_STATUS,
   },
 

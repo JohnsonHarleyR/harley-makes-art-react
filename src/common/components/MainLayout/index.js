@@ -12,6 +12,7 @@ const MainLayout = ({
 
   useEffect(() => {
     if (!isLoggedIn) {
+
       autoSignUserIn();
     }
   }, []);
@@ -22,9 +23,6 @@ const MainLayout = ({
         <p>
           Test: <br></br>
           isLoggedIn? {`${isLoggedIn}`} <br></br>
-          {isLoggedIn
-            ? `${userInfo}`
-            : ''}
         </p>
       </header>
       <div>
@@ -36,7 +34,6 @@ const MainLayout = ({
 
 
 const mapStateToProps = ({user, theme}) => {
-  console.log(`user: `, user);
   return {
     isLoggedIn: user.isLoggedIn,
     userInfo: user.accountInfo,
