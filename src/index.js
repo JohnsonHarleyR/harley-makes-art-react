@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import MainLayout from './common/components/MainLayout';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -15,9 +15,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <MainLayout>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </MainLayout>
     </Provider>
   </React.StrictMode>
 );

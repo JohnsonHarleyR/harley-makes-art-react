@@ -1,18 +1,34 @@
 import TYPES from './types';
 
 const initialState = {
-  dataItem: "Your var here",
+  isLoggedIn: false,
+  errorMessage: null,
+  user: null,
 }
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
-    case TYPES.YOUR_ACTION:
+    case TYPES.LOG_USER_IN:
       return {
         ...state,
-        dataItem: action.payload,
+        isLoggedIn: true,
+        errorMessage: null,
+        user: action.user,
       };
+    case TYPES.FAIL_TO_LOG_USER_IN:
+      return {
+        ...state,
+        isLoggedIn: false,
+        errorMessage: action.errorMessage,
+        user: null,
+      };
+    case TYPES.CHANGE_ERROR_MESSAGE:
+      return {
+        ...state,
+        errorMessage: action.errorMessage,
+      }
   }
 }
 

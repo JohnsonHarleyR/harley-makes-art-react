@@ -1,7 +1,14 @@
 import TYPES from './types';
+import { API_ENDPOINTS, API_STATUS } from '../constants';
+import { API_CLIENT } from '../constants';
 
 const initialState = {
-  dataItem: "Your var here",
+  api: {
+    endPoints: API_ENDPOINTS,
+    client: API_CLIENT,
+    statuses: API_STATUS,
+  },
+
 }
 
 const commonReducer = (state = initialState, action) => {

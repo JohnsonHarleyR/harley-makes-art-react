@@ -1,13 +1,28 @@
 import TYPES from './types';
 
-const userAction = (data) => {
+const logUserIn = (user) => {
   return {
-    type: TYPES.YOUR_ACTION,
-    payload: data,
+    type: TYPES.LOG_USER_IN,
+    user: user,
   };
 };
 
+const failToLogUserIn = (errorMessage) => {
+  return {
+    type: TYPES.FAIL_TO_LOG_USER_IN,
+    errorMessage: errorMessage,
+  }
+}
+
+const changeErrorMessage = (errorMessage) => {
+  return {
+    type: TYPES.CHANGE_ERROR_MESSAGE,
+    errorMessage: errorMessage,
+  }
+}
+
 export default {
-  userAction,
-  
+  logUserIn,
+  failToLogUserIn,
+  changeErrorMessage,
 }
