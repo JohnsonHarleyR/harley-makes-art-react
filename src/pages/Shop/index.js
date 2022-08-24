@@ -6,7 +6,9 @@ const Shop = ({
 }) => {
 
   return (
-    <></>
+    <>
+      Shop Page
+    </>
   );
 }
 

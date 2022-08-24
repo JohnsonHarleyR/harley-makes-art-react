@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { useEffect } from "react";
 
 
 const CheckOut = ({
@@ -13,7 +14,9 @@ const CheckOut = ({
   }, [isLoggedIn]);
 
   return (
-    <></>
+    <>
+
+    </>
   );
 }
 

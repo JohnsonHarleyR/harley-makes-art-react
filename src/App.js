@@ -46,6 +46,7 @@ function App() {
       <Route path="/cart/checkOut" element={<CheckOut goToLogin={goToLogin} />} />
       <Route path="/shop" element={<Shop page={null} />} />
       <Route path="/shop/:pageNumber" element={<Shop page={null} />} />
+      <Route path="/:any" element={<Home />} />
     </Routes>
   );
 }

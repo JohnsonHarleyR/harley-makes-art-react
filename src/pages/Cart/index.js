@@ -6,7 +6,9 @@ const Cart = ({
 }) => {
 
   return (
-    <></>
+    <>
+      Cart Page
+    </>
   );
 }
 
