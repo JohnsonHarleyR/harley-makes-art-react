@@ -1,0 +1,6 @@
+
+const INVENTORY_ACTION_TYPE = {
+  YOUR_ACTION: "YOUR_ACTION",
+}
+
+export default INVENTORY_ACTION_TYPE;

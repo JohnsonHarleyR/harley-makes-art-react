@@ -1,0 +1,6 @@
+
+const SHOP_ACTION_TYPE = {
+  YOUR_ACTION: "YOUR_ACTION",
+}
+
+export default SHOP_ACTION_TYPE;
