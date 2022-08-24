@@ -2,14 +2,15 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 
 
-const UserAccount = ({
+const SignUp = ({
   isLoggedIn,
-  navigateToLogin,
+  navigateTo,
+  prevPath,
 }) => {
 
   useEffect(() => {
-    if (isLoggedIn === false) {
-      navigateToLogin();
+    if (isLoggedIn === true) {
+      navigateTo("/");
     }
   }, [isLoggedIn]);
 
@@ -29,4 +30,4 @@ const mapDispatchToProps = {
 
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserAccount);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

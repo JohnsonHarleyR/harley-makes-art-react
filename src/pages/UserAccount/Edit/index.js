@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 
 
-const UserAccount = ({
+const Edit = ({
   isLoggedIn,
   navigateToLogin,
 }) => {
@@ -29,4 +29,4 @@ const mapDispatchToProps = {
 
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserAccount);
+export default connect(mapStateToProps, mapDispatchToProps)(Edit);

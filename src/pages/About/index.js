@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
 
-const Cart = ({
+const About = ({
 
 }) => {
 
@@ -21,4 +21,4 @@ const mapDispatchToProps = {
 
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default connect(mapStateToProps, mapDispatchToProps)(About);

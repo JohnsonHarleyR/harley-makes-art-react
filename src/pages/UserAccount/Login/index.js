@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
 
-const YourComp = ({
+const Login = ({
 
 }) => {
 
@@ -21,4 +21,4 @@ const mapDispatchToProps = {
 
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(YourComp);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
