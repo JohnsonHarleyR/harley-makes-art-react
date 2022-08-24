@@ -1,17 +1,19 @@
 import TYPES from './types';
+import Theme from '../all-themes';
 
 const initialState = {
-  dataItem: "Your var here",
+  isThemeImplemented: false,
+  model: Theme.DEFAULT,
 }
 
 const themeReducer = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
-    case TYPES.YOUR_ACTION:
+    case TYPES.SET_THEME_IS_IMPLEMENTED:
       return {
         ...state,
-        dataItem: action.payload,
+        isThemeImplemented: action.value,
       };
   }
 }

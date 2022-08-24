@@ -1,13 +1,13 @@
 import TYPES from './types';
 
-const themeAction = (data) => {
+const setThemeIsImplemented = (value) => {
   return {
-    type: TYPES.YOUR_ACTION,
-    payload: data,
+    type: TYPES.SET_THEME_IS_IMPLEMENTED,
+    value: value,
   };
 };
 
 export default {
-  themeAction,
+  setThemeIsImplemented,
   
 }

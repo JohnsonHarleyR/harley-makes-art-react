@@ -2,11 +2,22 @@
 :root {
   // colors
   --primary-color: #fff,
-  --secondary-color: #000,
-  --accent-color: 'blue',
+  --secondary-color: #fff,
+  --accent-color: #fff,
 
   // fonts
   --title-font: '',
   --navigation-font: '',
   --normal-font: '',
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--normal-font);
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font);
+    color: var(--accent-color);
+  }
 }

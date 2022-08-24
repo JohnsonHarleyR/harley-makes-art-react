@@ -4,17 +4,17 @@ import { connect } from "react-redux";
 
 const UserAccount = ({
   isLoggedIn,
-  navigateToLogin,
+  goToLogin,
 }) => {
 
   useEffect(() => {
     if (isLoggedIn === false) {
-      navigateToLogin();
+      goToLogin();
     }
   }, [isLoggedIn]);
 
   return (
-    <></>
+    <>account page woo</>
   );
 }
 
