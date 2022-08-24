@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
-// import { UserReducer as user } from "../common/components/user/redux";
-// import { LayoutReducer as layout } from '../common/components/layout/MainLayout/redux';
+import { ThemeReducer as theme } from "../theme/redux";
+import { CommonReducer as common } from "../common/redux";
+import { UserReducer as user } from "../pages/UserAccount";
 
 const rootReducer = combineReducers({
-  // user,
-  // layout,
+  theme,
+  common,
+  user,
 });
 
 export default rootReducer;

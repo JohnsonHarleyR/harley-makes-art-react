@@ -1,0 +1,6 @@
+
+const COMMON_ACTION_TYPE = {
+  YOUR_ACTION: "YOUR_ACTION",
+}
+
+export default COMMON_ACTION_TYPE;

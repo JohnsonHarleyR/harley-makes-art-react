@@ -1,0 +1,6 @@
+
+const USER_ACTION_TYPE = {
+  YOUR_ACTION: "YOUR_ACTION",
+}
+
+export default USER_ACTION_TYPE;

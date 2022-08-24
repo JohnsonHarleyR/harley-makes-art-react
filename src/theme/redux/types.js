@@ -1,0 +1,6 @@
+
+const THEME_ACTION_TYPE = {
+  YOUR_ACTION: "YOUR_ACTION",
+}
+
+export default THEME_ACTION_TYPE;

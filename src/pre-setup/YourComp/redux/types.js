@@ -1,0 +1,6 @@
+
+const COMP_ACTION_TYPE = {
+  YOUR_ACTION: "YOUR_ACTION",
+}
+
+export default COMP_ACTION_TYPE;
