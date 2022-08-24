@@ -3,7 +3,7 @@ import TYPES from './types';
 const initialState = {
   isLoggedIn: false,
   errorMessage: null,
-  user: null,
+  accountInfo: null,
 }
 
 const userReducer = (state = initialState, action) => {
@@ -15,14 +15,14 @@ const userReducer = (state = initialState, action) => {
         ...state,
         isLoggedIn: true,
         errorMessage: null,
-        user: action.user,
+        accountInfo: action.accountInfo,
       };
     case TYPES.FAIL_TO_LOG_USER_IN:
       return {
         ...state,
         isLoggedIn: false,
         errorMessage: action.errorMessage,
-        user: null,
+        accountInfo: null,
       };
     case TYPES.CHANGE_ERROR_MESSAGE:
       return {

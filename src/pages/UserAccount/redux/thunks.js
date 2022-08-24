@@ -1,5 +1,6 @@
 import { LoginResult } from '../../../common/constants/user';
 import actions from './actions';
+import apiClient from '../../../common/constants/util/api-client';
 
 const signUserIn = (email, password) => async(
   dispatch,
@@ -9,9 +10,8 @@ const signUserIn = (email, password) => async(
   let api = state.common.api;
   let endPoints = api.endPoints;
   let statuses = api.statuses;
-  let send = api.client.send;
 
-  let result = send(endPoints.user.GET_USER_ACCOUNT_INFO, {email, password});
+  let result = apiClient.send(endPoints.user.GET_USER_ACCOUNT_INFO, {email, password});
   // HACK will need to modify once real apis are used
 
   // if api call fails

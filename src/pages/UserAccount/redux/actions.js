@@ -3,7 +3,7 @@ import TYPES from './types';
 const logUserIn = (user) => {
   return {
     type: TYPES.LOG_USER_IN,
-    user: user,
+    accountInfo: user,
   };
 };
 

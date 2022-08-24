@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { autoSignUserIn } from "../../redux/thunks";
+import { userThunks } from "../../../redux/thunks";
 import "../../../theme/styles/css/layout.css";
-
 
 const MainLayout = ({
   children,
   isLoggedIn,
-  user,
+  userInfo,
   autoSignUserIn,
 }) => {
 
@@ -22,9 +21,9 @@ const MainLayout = ({
       <header>
         <p>
           Test: <br></br>
-          isLoggedIn? {isLoggedIn} <br></br>
+          isLoggedIn? {`${isLoggedIn}`} <br></br>
           {isLoggedIn
-            ? user
+            ? `${userInfo}`
             : ''}
         </p>
       </header>
@@ -37,14 +36,15 @@ const MainLayout = ({
 
 
 const mapStateToProps = ({user, theme}) => {
+  console.log(`user: `, user);
   return {
-    isLoggedIn: user.isSignedIn,
-    user: user.user,
+    isLoggedIn: user.isLoggedIn,
+    userInfo: user.accountInfo,
   };
 };
 
 const mapDispatchToProps = {
-  autoSignUserIn,
+  autoSignUserIn: userThunks.autoSignUserIn,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainLayout);

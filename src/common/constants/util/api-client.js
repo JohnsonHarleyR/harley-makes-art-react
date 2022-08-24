@@ -1,5 +1,5 @@
 import API_STATUS from "../api-status";
-import { API_ENDPOINTS } from "..";
+import apiEndPoints from "../api-endpoints.js";
 import { simulateGetUserData_Success } from "./simulate/api-simulate";
 
 const baseUrl = "http://url-here.example";
@@ -15,7 +15,7 @@ const apiClient = {
           error: 'Endpoint does not exist.',
           data: null,
         }
-      case API_ENDPOINTS.user.GET_USER_ACCOUNT_INFO:
+      case apiEndPoints.user.GET_USER_ACCOUNT_INFO:
         return simulateGetUserData_Success(payload);
     }
   },

@@ -1,7 +1,7 @@
+import { hashPasswordToSimulate } from "../simulate-helpers"
 
 //#region User
 
-import { hashPasswordToSimulate } from "./api-simulate"
 
 //#region Fake User Data
 
