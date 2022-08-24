@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import { ThemeReducer as theme } from "../theme/redux";
 import { CommonReducer as common } from "../common/redux";
-import { UserReducer as user } from "../pages/UserAccount";
+import { UserReducer as user } from "../pages/UserAccount/redux";
 
 const rootReducer = combineReducers({
   theme,
