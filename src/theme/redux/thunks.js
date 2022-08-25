@@ -1,5 +1,5 @@
 import actions from './actions';
-import { implementThemeValues } from '../theme-helpers';
+import { implementThemeValuesToCss } from '../theme-helpers';
 
 const implementTheme = () => async(
   dispatch,
@@ -8,11 +8,12 @@ const implementTheme = () => async(
   let state = getState();
 
   let themeModel = state.theme.model;
-  implementThemeValues(themeModel);
+  implementThemeValuesToCss(themeModel);
 
   dispatch(actions.setThemeIsImplemented(true));
 }
 
+// eslint-disable-next-line
 export default {
   implementTheme,
 };

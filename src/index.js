@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import MainLayout from './common/components/MainLayout';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from "@material-ui/core/styles";
 
 import {
   BrowserRouter,
@@ -15,11 +16,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <MainLayout>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </MainLayout>
+      <ThemeProvider>
+        <MainLayout>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </MainLayout>
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>
 );
