@@ -1,4 +1,19 @@
+import { createMuiTheme } from '@material-ui/core/styles';
 
+export const createTheme = (model) => {
+  const theme = createMuiTheme();
+
+  return theme;
+}
+
+export const implementThemeValuesToCss = (theme) => {
+  for (var prop in theme) {
+    let varName = getCssVariable(prop);
+    document.documentElement.style.setProperty(varName, theme[prop]);
+  }
+}
+
+//#region private
 
 const getCssVariable = (propName) => {
   switch(propName){
@@ -19,9 +34,4 @@ const getCssVariable = (propName) => {
   }
 }
 
-export const implementThemeValues = (theme) => {
-  for (var prop in theme) {
-    let varName = getCssVariable(prop);
-    document.documentElement.style.setProperty(varName, theme[prop]);
-  }
-}
+//#endregion
